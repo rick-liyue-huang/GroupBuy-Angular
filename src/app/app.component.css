@@ -1,0 +1,32 @@
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  color: green;
+}
+
+.first {
+  color: blue;
+}
+
+.odd {
+  color: navy;
+}
