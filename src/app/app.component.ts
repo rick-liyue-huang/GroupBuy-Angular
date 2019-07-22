@@ -1,17 +1,6 @@
 import { Component } from '@angular/core';
+import { TopMenu } from './components';
 
-interface TopMenu {
-  title: string,
-  link?: string
-}
-
-interface AddFunc {
-  (x: number, y: number): number
-}
-
-interface Dict {
-  [key: string]: string
-}
 
 @Component({
   selector: 'app-root',
@@ -19,8 +8,7 @@ interface Dict {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GroupBuy-Angular';
-  menus: TopMenu[] = [
+  topMenus: TopMenu[] = [
     {
       title: 'Hot',
       link: ''
@@ -58,13 +46,8 @@ export class AppComponent {
       link: ''
     }
   ];
-  selectedIndex = -1;
-  constructor() {
-    console.log(this.dict['a']);
-  }
-  add: AddFunc = (x, y) => x + y;
-  dict: Dict = {
-    a: '6',
-    b: '66'
+
+  handleTabSelected(topMenu: TopMenu) {
+    console.log(topMenu);
   }
 }

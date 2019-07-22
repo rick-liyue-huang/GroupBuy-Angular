@@ -9,3 +9,5 @@ flex 布局
 
 ng serve --host 0.0.0.0
 mobile http://xxx:4200
+
+wrap one child component

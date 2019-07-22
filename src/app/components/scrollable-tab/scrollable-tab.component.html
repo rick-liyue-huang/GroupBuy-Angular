@@ -1,0 +1,14 @@
+
+<ul>
+    <li *ngFor="let item of menus; let i = index; let odd = odd; let first = first; trackBy: item ? item.title : null;">
+      <a 
+        href="#" 
+        [class.active]="selectedIndex === i"
+        [class.first]='first'
+        [class.odd]='odd'
+        (click)="handleSelection(i)" >{{ item.title }} - {{ i }} - {{ odd }}</a>
+      <span class='indicator' *ngIf="i === selectedIndex"></span>
+    </li>
+    
+    
+  </ul>
